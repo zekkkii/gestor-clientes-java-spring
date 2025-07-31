@@ -1,2 +1,3 @@
 Las instrucciones para correr el front estan el el read me del cliente-frontend
 El proyecto en java/springboot se puede correr normal, solo que debe crear una db antes de usar, puede modificar el yml a su antojo para correr...
+http://localhost:8080/swagger-ui/index.html# este es el link para ver la doc con swagger
