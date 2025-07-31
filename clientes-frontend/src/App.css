@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.App-header h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.App-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.App-header nav button {
+  background: transparent;
+  border: 2px solid #ecf0f1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.App-header nav button:hover,
+.App-header nav button.active {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.App-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.action-bar {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.message {
+  padding: 1rem;
+  margin: 1rem 2rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+button.primary {
+  background-color: #3498db;
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #2980b9;
+}
+
+button.secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+button.secondary:hover {
+  background-color: #7f8c8d;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+table tr:hover {
+  background-color: #f8f9fa;
+}
+
+table button {
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+table button:nth-child(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+table button:nth-child(1):hover {
+  background-color: #218838;
+}
+
+table button:nth-child(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+table button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+table button:nth-child(3) {
+  background-color: #6f42c1;
+  color: white;
+}
+
+table button:nth-child(3):hover {
+  background-color: #5a32a3;
+}
+
+.cliente-form,
+.direccion-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.cliente-list,
+.direccion-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cliente-list h2,
+.direccion-list h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.error {
+  color: #dc3545;
+  padding: 1rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .App-main {
+    padding: 1rem;
+  }
+  
+  .App-header {
+    padding: 1rem;
+  }
+  
+  .App-header nav {
+    flex-direction: column;
+  }
+  
+  table {
+    font-size: 0.8rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
